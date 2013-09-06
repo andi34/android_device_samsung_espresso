@@ -82,7 +82,9 @@ PRODUCT_PACKAGES += \
     lights.piranha \
     libinvensense_mpl \
     power.piranha \
-    libsecril-client
+    sensors.piranha \
+    geomagneticd \
+    orientationd
 
 # Charger
 PRODUCT_PACKAGES += \
