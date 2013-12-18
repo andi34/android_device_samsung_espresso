@@ -68,10 +68,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.piranha \
     lights.piranha \
     libinvensense_mpl \
-    power.piranha \
-    sensors.piranha \
-    geomagneticd \
-    orientationd
+    power.piranha
 
 # Charger
 PRODUCT_PACKAGES += \
