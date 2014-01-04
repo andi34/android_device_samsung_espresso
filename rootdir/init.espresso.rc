@@ -14,7 +14,7 @@ on init
     export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
     export EMULATED_STORAGE_TARGET /storage/emulated
 
-    # for backwards compatibility
+# for backwards compatibility
     symlink /storage/emulated/legacy /sdcard
     symlink /storage/emulated/legacy /mnt/sdcard
     symlink /storage/emulated/legacy /storage/sdcard0
@@ -44,7 +44,7 @@ on fs
     mkdir /efs
     mount_all /fstab.espresso
 
- # We chown/chmod /efs because mount is run as root + defaults
+# We chown/chmod /efs because mount is run as root + defaults
     chown radio system /efs
     chmod 0775 /efs
 
@@ -95,7 +95,7 @@ on post-fs-data
     write /sys/devices/system/cpu/cpu0/cpufreq/screen_off_max_freq 800000
     chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/screen_off_max_freq
 
-#DVFS Lock
+# DVFS Lock
     chown radio system /sys/power/cpufreq_min_limit
     chown radio system /sys/power/cpufreq_max_limit
     chown radio system /sys/power/cpufreq_table
@@ -247,7 +247,7 @@ on post-fs-data
     mkdir /data/gps 771 system system
     chown system system /data/gps
 
-#Change permission for backlight and lcd
+# Change permission for backlight and lcd
     chown system system /sys/class/backlight/panel/brightness
     chown system radio /sys/class/lcd/panel/lcd_type
     chown system radio /sys/class/lcd/panel/lcd_power
@@ -408,9 +408,9 @@ service gpsd /system/bin/gpsd -c /system/etc/gps.xml
 
 # Keyboard
 service dock_kbd_attach /system/bin/dock_kbd_attach /dev/ttyO3
-	class main
-	user root
-	oneshot
+    class main
+    user root
+    oneshot
 
 # LPM
 on property:ro.bootmode=charger
