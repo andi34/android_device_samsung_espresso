@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2013 OmniROM Project
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,25 +15,21 @@
 # limitations under the License.
 #
 
-## Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/gsm.mk)
+# Inherit Omni GSM telephony parts
+$(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := p3100
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1024
-TARGET_SCREEN_WIDTH := 600
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/p3100/full_p3100.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := p3100
-PRODUCT_NAME := cm_p3100
+PRODUCT_NAME := omni_p3100
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-P3100
 PRODUCT_MANUFACTURER := samsung

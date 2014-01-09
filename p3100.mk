@@ -18,6 +18,7 @@ $(call inherit-product, device/samsung/p3100/p31xx-common.mk)
 
 LOCAL_PATH := device/samsung/p3100
 
+# Overlay 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Audio
@@ -25,9 +26,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/espressorf \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
+# TWRP
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+
 # Packages
 PRODUCT_PACKAGES += \
-    SamsungServiceMode
+    SamsungServiceMode \
+    OmniGears
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
