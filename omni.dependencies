@@ -1,7 +1,7 @@
 [
   {
-    "remote": "github",
-    "repository": "andi34/android_device_samsung_omap4-common",
+    "remote": "omnirom",
+    "repository": "android_device_samsung_omap4-common",
     "target_path": "device/samsung/omap4-common",
     "revision": "android-4.4"
   },
@@ -12,10 +12,10 @@
     "revision": "android-4.4"
   },
   {
-    "remote": "github",
-    "repository": "andi34/android_kernel_samsung_espresso10",
+    "remote": "omnirom",
+    "repository": "android_kernel_samsung_espresso10",
     "target_path": "kernel/samsung/espresso10",
-    "revision": "cm-11.0"
+    "revision": "android-4.4"
   },
   {
     "remote": "omnirom",
