@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2013 OmniROM Project
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,8 +29,7 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    SamsungServiceMode \
-    OmniGears
+    SamsungServiceMode
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \

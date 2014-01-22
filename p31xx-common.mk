@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2013 OmniROM Project
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,8 +35,10 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.espresso.usb.rc:root/init.espresso.usb.rc \
     $(LOCAL_PATH)/rootdir/init.espresso.rc:root/init.espresso.rc \
+    $(LOCAL_PATH)/rootdir/init.recovery.espresso.rc:root/init.recovery.espresso.rc \
     $(LOCAL_PATH)/rootdir/ueventd.espresso.rc:root/ueventd.espresso.rc \
-    $(LOCAL_PATH)/rootdir/fstab.espresso:root/fstab.espresso
+    $(LOCAL_PATH)/rootdir/fstab.espresso:root/fstab.espresso \
+    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -59,10 +62,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/usr/keychars/espresso-gpio-keypad.kcm:system/usr/keychars/espresso-gpio-keypad.kcm \
     $(LOCAL_PATH)/usr/keylayout/espresso-gpio-keypad.kl:system/usr/keylayout/espresso-gpio-keypad.kl \
     $(LOCAL_PATH)/usr/keylayout/sec_keyboard.kl:system/usr/keylayout/sec_keyboard.kl
-
-# TWRP
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Packages
 PRODUCT_PACKAGES += \

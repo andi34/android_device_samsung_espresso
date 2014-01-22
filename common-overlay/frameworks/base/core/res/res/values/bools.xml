@@ -15,5 +15,5 @@ limitations under the License.
 -->
 
 <resources>
-    <bool name="preferences_prefer_dual_pane">true</bool>
+    <bool name="preferences_prefer_dual_pane">false</bool>
 </resources>
