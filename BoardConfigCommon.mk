@@ -101,6 +101,9 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/p3100/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/p3100/bluetooth/vnd_espresso.txt
 
+# Screenrecord
+BOARD_SCREENRECORD_DEVICE_FORCE_AUDIO_MIC := true
+
 # Sensors
 BOARD_USE_LEGACY_SENSORS_FUSION := false
 
