@@ -18,21 +18,25 @@
 # Inherit Omni GSM telephony parts
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
-# Release name
-PRODUCT_RELEASE_NAME := p3100
-
-# Inherit some common Omni stuff.
+# Inherit common Omni configurations
 $(call inherit-product, vendor/omni/config/common.mk)
 
-# Inherit device configuration
-$(call inherit-product, device/samsung/p3100/full_p3100.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := p3100
-PRODUCT_NAME := omni_p3100
-PRODUCT_BRAND := samsung
+# Inherit device specific configurations
+$(call inherit-product, device/samsung/p3100/device.mk)
+
+# Device identifier. This must come after all inclusions
 PRODUCT_MODEL := GT-P3100
+PRODUCT_BRAND := samsung
+PRODUCT_NAME := omni_p3100
+PRODUCT_DEVICE := p3100
 PRODUCT_MANUFACTURER := samsung
 
 #Set build fingerprint / ID / Prduct Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=espressorfxx TARGET_DEVICE=espressorf BUILD_FINGERPRINT=samsung/espressorfxx/espressorf:4.0.3/IML74K/P3100XWALE2:user/release-keys PRIVATE_BUILD_DESC="espressorfxx-user 4.0.3 IML74K P3100XWALE2 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=espressorfxx \
+    TARGET_DEVICE=espressorf \
+    PRIVATE_BUILD_DESC="espressorfxx-user 4.2.2 JDQ39 P3100XWDNA1 release-keys" \
+    BUILD_FINGERPRINT="samsung/espressorfxx/espressorf:4.2.2/JDQ39/P3100XWDNA1:user/release-keys"
