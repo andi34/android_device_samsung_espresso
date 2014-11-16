@@ -278,10 +278,11 @@ on post-fs-data
 on boot
 
 # initialize the SGX driver
-service pvrsrvinit /system/vendor/bin/pvrsrvinit
+service pvrsrvinit /system/bin/pvrsrvinit
     class core
     user root
     group root
+    seclabel u:r:pvrsrvinit:s0
     oneshot
     disabled
 
