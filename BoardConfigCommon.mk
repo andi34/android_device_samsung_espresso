@@ -145,6 +145,7 @@ TW_HAS_DOWNLOAD_MODE := true
 TW_FLASH_FROM_STORAGE := true
 TW_INCLUDE_JB_CRYPTO := true
 TW_MAX_BRIGHTNESS := 255
+TW_EXCLUDE_MTP := true
 
 # Charging mode
 BOARD_CHARGER_RES := device/samsung/p3100/res/charger
