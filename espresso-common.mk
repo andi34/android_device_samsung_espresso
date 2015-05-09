@@ -139,6 +139,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.disable_scissor_opt=true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-flags=--no-watch-dog
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 $(call inherit-product-if-exists, vendor/samsung/omap4-common/common-vendor.mk)
