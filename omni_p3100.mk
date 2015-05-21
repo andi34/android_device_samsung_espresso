@@ -31,7 +31,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/samsung/p3100/device.mk)
 
 # OmniRom specific overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/p3100/overlay/custom-common
+DEVICE_PACKAGE_OVERLAYS += device/samsung/p3100/overlay/custom
 DEVICE_PACKAGE_OVERLAYS += device/samsung/p3100/overlay/custom-common
 
 # Device identifier. This must come after all inclusions
