@@ -135,6 +135,7 @@ TW_HAS_DOWNLOAD_MODE := true
 TW_FLASH_FROM_STORAGE := true
 TW_INCLUDE_CRYPTO := true
 TW_MAX_BRIGHTNESS := 255
+TW_NO_CPU_TEMP := true
 TW_EXCLUDE_MTP := true
 
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/p3100/custombootimg.mk
