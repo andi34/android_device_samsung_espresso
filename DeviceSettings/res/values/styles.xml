@@ -14,8 +14,7 @@
      limitations under the License.
  -->
 <resources>
-    <style name="Theme.DeviceSettings" parent="@android:style/Theme.Holo">
-        <item name="android:actionBarStyle">@android:style/Widget.Holo.ActionBar.Solid</item>
+    <style name="Theme.Main" parent="@android:style/Theme.Material.Settings">
     </style>
 </resources>
 
