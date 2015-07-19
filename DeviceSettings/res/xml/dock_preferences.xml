@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2013 The CyanogenMod Project
      Copyright (C) 2014 The OmniROM Project
+     Copyright (C) 2015 SlimRoms
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -18,7 +19,7 @@
     <PreferenceCategory
                 android:title="@string/dockaudio_subcat_title">
     <!-- Use Dock Audio -->
-    <CheckBoxPreference
+    <SwitchPreference
                 android:key="dock_audio"
                 android:title="@string/use_dock_audio_title_head"
                 android:summary="@string/use_dock_audio_summary_head"

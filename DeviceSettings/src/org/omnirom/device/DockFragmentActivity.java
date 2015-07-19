@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2012 The CyanogenMod Project
  * Copyright (C) 2014 The OmniROM Project
+ * Copyright (C) 2015 SlimRoms
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,12 +24,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.util.Log;
 
 import org.omnirom.device.R;
@@ -56,7 +57,7 @@ public class DockFragmentActivity extends PreferenceFragment {
         Log.w(TAG, "key: " + key);
 
         if (key.compareTo(DeviceSettings.KEY_USE_DOCK_AUDIO) == 0) {
-            boxValue = (((CheckBoxPreference)preference).isChecked() ? "1" : "0");
+            boxValue = (((SwitchPreference)preference).isChecked() ? "1" : "0");
             Intent i = new Intent("org.omnirom.SamsungDock");
             i.putExtra("data", boxValue);
             ActivityManagerNative.broadcastStickyIntent(i, null, UserHandle.USER_ALL);
