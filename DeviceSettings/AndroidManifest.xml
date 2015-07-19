@@ -24,5 +24,8 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name="org.omnirom.device.AboutActivity"
+                  android:parentActivityName="org.omnirom.device.DeviceSettings" />
+
     </application>
 </manifest>
