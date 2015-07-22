@@ -28,7 +28,7 @@ import android.widget.Button;
 
 import org.omnirom.device.R;
 
-public class AboutActivity extends Fragment {
+public class AboutFragment extends Fragment {
 
     private static final String PREF_ENABLED = "1";
     private static final String TAG = "GalaxyTab2Settings_About";
@@ -43,7 +43,7 @@ public class AboutActivity extends Fragment {
             Bundle savedInstanceState) {
         super.onCreateView(inflater, root, savedInstanceState);
 
-        View view = inflater.inflate(R.layout.about_activity, root, false);
+        View view = inflater.inflate(R.layout.about_fragment, root, false);
         Button transSumm = (Button) view.findViewById(R.id.about_translation_summary);
         transSumm.setOnClickListener(new OnClickListener() {
 
