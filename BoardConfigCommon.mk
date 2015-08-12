@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2015 SlimRoms
 # Copyright (C) 2013 OmniROM Project
 # Copyright (C) 2012 The CyanogenMod Project
 #
@@ -56,7 +57,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Egl
-BOARD_EGL_CFG := device/samsung/p3100/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/espresso-common/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 
 # Boot Animation
@@ -96,8 +97,8 @@ BOARD_NO_APSME_ATTR              := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/p3100/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/p3100/bluetooth/vnd_espresso.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/espresso-common/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/espresso-common/bluetooth/vnd_espresso.txt
 
 # Screenrecord
 BOARD_SCREENRECORD_DEVICE_FORCE_AUDIO_MIC := true
@@ -110,7 +111,7 @@ BOARD_USES_SECURE_SERVICES := true
 
 # Selinux
 BOARD_SEPOLICY_DIRS += \
-    device/samsung/p3100/selinux
+    device/samsung/espresso-common/selinux
 
 BOARD_SEPOLICY_UNION += \
     file_contexts \
@@ -128,11 +129,10 @@ BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_EMMC_WIPE := true
-TARGET_RECOVERY_FSTAB := device/samsung/p3100/rootdir/etc/fstab.espresso
+TARGET_RECOVERY_FSTAB := device/samsung/espresso-common/rootdir/etc/fstab.tab2
 RECOVERY_FSTAB_VERSION := 2
 
 # TWRP
-DEVICE_RESOLUTION := 1024x600
 HAVE_SELINUX := true
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
@@ -148,7 +148,4 @@ TW_MAX_BRIGHTNESS := 255
 TW_EXCLUDE_MTP := true
 
 # Charging mode
-BOARD_CHARGER_RES := device/samsung/p3100/res/charger
-
-# Use the non-open-source parts, if they're present
--include vendor/samsung/p31xx/BoardConfigVendor.mk
+BOARD_CHARGER_RES := device/samsung/espresso-common/res/charger
