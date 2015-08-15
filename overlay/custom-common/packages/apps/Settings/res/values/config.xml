@@ -24,7 +24,7 @@
     <bool name="has_usb_audio_settings">true</bool>
 
     <!-- Button settings enabled or disabled -->
-    <bool name="config_device_has_button_settings" translatable="false">true</bool>
+    <bool name="config_device_has_button_settings">true</bool>
 
     <!-- Home button wake support -->
     <bool name="config_show_homeWake">true</bool>
