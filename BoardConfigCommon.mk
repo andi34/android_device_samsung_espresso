@@ -59,7 +59,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Egl
 BOARD_EGL_CFG := device/samsung/espresso-common/configs/egl.cfg
-USE_OPENGL_RENDERER := true
 
 # Boot Animation
 TARGET_BOOTANIMATION_PRELOAD := true
@@ -106,9 +105,6 @@ BOARD_SCREENRECORD_DEVICE_FORCE_AUDIO_MIC := true
 
 # Sensors
 BOARD_USE_LEGACY_SENSORS_FUSION := false
-
-# Security
-BOARD_USES_SECURE_SERVICES := true
 
 # Selinux
 BOARD_SEPOLICY_DIRS += \
