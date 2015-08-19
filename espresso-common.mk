@@ -77,7 +77,8 @@ PRODUCT_PACKAGES += \
     power.piranha \
     sensors.piranha \
     geomagneticd \
-    orientationd
+    orientationd \
+    libsecril-client
 
 # Storage
 PRODUCT_PROPERTY_OVERRIDES += \
