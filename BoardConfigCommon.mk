@@ -40,10 +40,6 @@ BOARD_KERNEL_BASE := 0x40000000
 # Use dlmalloc
 MALLOC_IMPL := dlmalloc
 
-# We don't support cursor layers, which when attempting to use them,
-# results in no cursors (mouse or otherwise) displayed on the screen.
-TARGET_DISABLE_CURSOR_LAYER := true
-
 # External SGX Module
 SGX_MODULES:
 	make clean -C $(HARDWARE_TI_OMAP4_BASE)/pvr-source/eurasiacon/build/linux2/omap4430_android
