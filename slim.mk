@@ -1,6 +1,6 @@
 #
-# Copyright (C) 2015 SlimRoms
 # Copyright (C) 2012 The CyanogenMod Project
+# Copyright (C) 2014 SlimRoms Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,14 +15,18 @@
 # limitations under the License.
 #
 
-# WARNING: Everything listed here will be built on ALL platforms,
-# including x86, the emulator, and the SDK.  Modules must be uniquely
-# named (liblights.tuna), and must build everywhere, or limit themselves
-# to only building on ARM if they include assembly. Individual makefiles
-# are responsible for having their own logic, for fine-grained control.
+# Boot animation
+TARGET_SCREEN_HEIGHT := 480
+TARGET_SCREEN_WIDTH := 600
 
-LOCAL_PATH := $(call my-dir)
+# Inherit common Slim configuration
+$(call inherit-product, vendor/slim/config/common_full_tablet_wifionly.mk)
 
-ifneq ($(filter espresso espresso3g,$(TARGET_DEVICE)),)
-include $(call all-makefiles-under,$(LOCAL_PATH))
-endif
+# SlimRoms specific overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/espresso/overlay/slim-common
+
+# Inherit device configuration
+$(call inherit-product, device/samsung/espresso/aosp_espresso.mk)
+
+# Device identifier. This must come after all inclusions
+PRODUCT_NAME := slim_espresso

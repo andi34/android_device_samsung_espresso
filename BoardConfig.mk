@@ -1,5 +1,4 @@
 #
-# Copyright (C) 2015 SlimRoms
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,14 +14,8 @@
 # limitations under the License.
 #
 
-# WARNING: Everything listed here will be built on ALL platforms,
-# including x86, the emulator, and the SDK.  Modules must be uniquely
-# named (liblights.tuna), and must build everywhere, or limit themselves
-# to only building on ARM if they include assembly. Individual makefiles
-# are responsible for having their own logic, for fine-grained control.
+# Include common espresso BoardConfig
+-include device/samsung/espresso/BoardConfigCommon.mk
 
-LOCAL_PATH := $(call my-dir)
-
-ifneq ($(filter espresso espresso3g,$(TARGET_DEVICE)),)
-include $(call all-makefiles-under,$(LOCAL_PATH))
-endif
+# assert
+TARGET_OTA_ASSERT_DEVICE := espresso,p3110,GT-P3110,p3113,GT-P3113,espressowifi,espressowifixx,p5110,GT-P5110,p5113,GT-P5113,espresso10wifi,espresso10wifixx
