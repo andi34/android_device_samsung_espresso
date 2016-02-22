@@ -3,10 +3,5 @@
         "repository": "SlimRoms/kernel_samsung_espresso10",
         "target_path": "kernel/samsung/espresso10",
         "branch": "kk4.4"
-    },
-    {
-        "repository": "SlimRoms/hardware_samsung",
-        "target_path": "hardware/samsung",
-        "branch": "kk4.4"
     }
 ]
